@@ -1,0 +1,36 @@
+#sidenave {
+    position: fixed;
+    top: 0;
+    
+    background-color:  rgb(197, 197, 229);
+    width: 200px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    border: 2px solid black;
+
+
+}
+#cut{
+    margin-left: 10px;
+}
+#sidenave form {
+    display: flex;
+    justify-content: center;
+}
+#sidenave form input{
+    display: none;
+}
+#sidenave form button{
+    width: 100px;
+    background-color:  rgb(197, 197, 229);
+    color: black;
+    border: 0px solid white;
+    align-self: center;
+    font-size: x-large;
+}
+#sidenave input{
+    width: 100px;
+    background-color:  rgb(197, 197, 229);
+    color: black;
+}

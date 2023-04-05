@@ -1,0 +1,96 @@
+body{
+    background-color:  rgb(197, 197, 229);
+    margin: 0;
+}
+nav{
+    background-color: rgb(91, 91, 229);
+    /* height: 30%; */
+    width: 100%;
+    position: fixed;
+    display: flex;
+    overflow: hidden;
+    top: 0;
+    gap: 20%;
+}
+/* nav{
+    background-color: rgb(47, 37, 232);
+    color: white;
+    display: flexbox;
+    position: sticky;
+    width: 100%;
+    height: 55px;
+    
+} */
+
+#div1{
+    background-color:  rgb(197, 197, 229);
+    margin: 20px;
+    margin-left: 0;
+    margin-right: 0;
+    margin-top: 68px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    /* border-radius: 15px;
+    border: 1px solid black; */
+}
+#form div{
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+#form div input{
+    height: 30px;
+    border-radius: 10px;
+    border: 0.1px solid black;
+    padding-left: 5px;
+    background-color:  rgb(230, 230, 242);
+}
+#form div select{
+    height: 35px;
+    border-radius: 10px;
+    background-color:  rgb(230, 230, 242);
+}
+#pindiv{
+    padding: 15px;
+    background-color:  rgb(230, 230, 242);
+    border: 1px solid black;
+    border-radius: 10px;
+}
+#form button{
+    width: 150px;
+    align-self: center;
+    height: 30px;
+    border-radius: 10px;
+    background-color: rgb(47, 37, 232);
+    color: white;
+}
+#form{
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.836);
+    gap: 10px;
+    border-radius: 10px;
+}
+form{
+    margin-left: 0;
+    margin-right: 0;
+}
+#div1 h1{
+    align-self: center;
+    margin-top: 0;
+}
+#h2{
+    margin: 0;
+    padding-top: 18px;
+    font-size: 30px;
+    color: white;
+    /* padding: 15px; */
+    /* margin-left: 30%; */
+}
+#h1{
+    float: left;
+    margin: 0;
+    padding: 15px;
+}

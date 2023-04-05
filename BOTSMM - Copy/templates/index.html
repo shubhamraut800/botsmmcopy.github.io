@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, user-scalable=no">
+    <link rel="stylesheet" href="{{ url_for('static',filename='sing&log.css')}}">
+    <link rel="stylesheet" href="{{ url_for('static',filename='nav.css')}}">
+    <!-- <link rel="stylesheet" href="{{ url_for('static',filename='style4.css')}}">
+    <link rel="stylesheet" href="{{ url_for('static',filename='style5.css')}}">
+    <link rel="stylesheet" href="{{ url_for('static',filename='style6.css')}}">  -->
+    <title>Document</title>
+</head>
+<body>
+    <nav>
+        <h1 id="h1" onclick="openNav()"><big>&#9776;</big></h1>
+        <h1 id="h2">BOTSMM</h1>
+    </nav>
+    <main>
+        <form action="/order" method="post">
+            <div id="div1">
+                <h1>new order</h1>
+                <div id="form">
+                    <div>
+                        <label for="">catogary:</label>
+                        <select name="service2" id="firstSelect">
+                            <option value="1">💸Free Services💸</option>
+                            <option value="2">New Things - Temporary Category</option>
+                            <option value="3">🔥 Limited Time Services 🔥</option>
+                            <option value="4">🇮🇳Instagram Indian Likes [Own Supplier]</option>
+                            <option value="5">💝Instagram Followers | 30-60 Days Refill</option>
+                            <option value="6">💝Instagram Followers | 60-100 Days Refill</option>
+                            <option value="7">💝Instagram Followers - 100+ Days Refill</option>
+                            <option value="8">💝Instagram Followers - 1 Year Refill</option>
+                            <option value="9">💝Instagram Followers - Zero Drop</option>
+                            <option value="10">💝Instagram Followers - Auto Refill</option>
+                            <option value="11">👧Instagram Female👧</option>
+                            <option value="12">💛Instagram Followers - Non Refill [HQ]</option>
+                            <option value="13">💛Instagram Followers - Non Refill [BOT]</option>
+
+                            
+                        </select>
+                    </div>
+                    <div>
+                        <label for="">service:</label>
+                        <select name="service" id="secondSelect">
+                            <option value="temprory">👉Instagram Followers - Free Service - [Instant Service⚡ || Read Description]</option>
+                            <option value="permanent">👉Instagram Likes - Free Service - [Instant Service⚡ || Read Description]</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label for="">Description:</label>
+                        <p id="pindiv">Important Note :
+                            ⚠️Its prohibited to use free service on same link multiple times.
+                            However you can use it as much on different links.
+                            If any user is found using free service on same link multiple times. Free service will be removed from their account.
+                            And appropriate Penalty will be charged.⚠️
+                            
+                            This is a demo service only.
+                            It can drop 100%
+                            This service is made only to showcase the ability.
+                            Specially for the resellers when a new client ask for Proofs or Free Demo this service can be used.
+                            Also it doesn't guarantee full delivery of quantity
+                            
+                            No refund/Refill guarantee in any case</p>
+                    </div>
+                    <div>
+                        <label for="">link:</label>
+                        <input type="text" name="link"placeholder="enter your link">
+                    </div>
+                    <div>
+                        <label for="">quantity:</label>
+                        <input type="text" name="quantity" placeholder="enter quantity">
+                    </div>
+                    <button id="submitbttn">submit</button>
+                </div>
+            </div>
+        </form>
+    </main>
+    <div id="whatdiv">
+       <a href="https://wa.me/message/AFZ3X4ZB5NSKN1"><img src="{{ url_for('static',filename='images/whatappimg.png')}}" alt=""></a>
+
+    </div>
+    <div id="sidenave">
+        <h1><a href="javascript:void(0)" id="cut" onclick="closeNav()">&times</a></h1>
+        <input type="text" value={{ username }} disabled>
+        <form action="/orderhis" method="post">
+            <input type="text" value={{ username }} disabled>
+            <button class="snavb" id="orderhisb">orderhis</button>
+        </form>
+        <form action="/index" method="post">
+            <input type="text" value={{ username }} disabled>
+            <button class="snavb" id="Home">Home</button>
+        </form>
+        <form action="/logout" method="post">
+            <input name="username" type="text" value={{ username }} disabled>
+            <button class="snavb" id="logout" class="logout">logout</button>
+        </form>
+        <!-- <a class="snavb" href="/orderhis"><button class="snavb">orders</button></a> -->
+        <!-- <button class="snavb"><a href="/logout">logout</a></button> -->
+    </div>
+</body>
+<script>
+    const firstSelect = document.getElementById("firstSelect");
+    const secondSelect = document.getElementById("secondSelect");
+    
+    // Define the options for the second select element
+    const optionValues = {
+      1: ["👉Instagram Followers - Free Service - [Instant Service⚡ || Read Description]", "👉Instagram Likes - Free Service - [Instant Service⚡ || Read Description]"],
+      2: ["	💎Instagram Real Likes - [No Bots ! Real People] - Instant Start - [Non Drop] - Real Engagement ❤⭐", "💎Instagram Real Female Likes - [No Bots ! Real People] - Instant Start - [Non Drop] - Real Engagement ❤👧", "💎Instagram Real Male Likes - [No Bots ! Real People] - Instant Start - [Non Drop] - Real Engagement ❤👦","💎Instagram Real Comments - [No Bots ! Real People] - Instant Start - [Non Drop] - Real Engagement 💭⭐","💎Instagram Real Female Comments - [No Bots ! Real People] - Instant Start - [Non Drop] - Real Engagement 💭👧","💎Instagram Real Male Comments - [No Bots ! Real People] - Instant Start - [Non Drop] - Real Engagement 💭👦","💎Instagram Real Story Views - [No Bots ! Real People] - Instant Start - [Non Drop] - Real Engagement 👀⭐","💎Instagram Real Female Story Views - [No Bots ! Real People] - Instant Start - [Non Drop] - Real Engagement 👀👧","💎Instagram Real Story Male Views - [No Bots ! Real People] - Instant Start - [Non Drop] - Real Engagement 👀👦"],
+      3: ["🆕Instagram Likes - [Non Drop] - [Slow Speed] - Real HQ", "	🆕Instagram Likes - [Non Drop] - [Old Accounts || High Quality]", "🆕Instagram Likes - [Non Drop] - [Accounts with PFP] - Real HQ","🆕Instagram Likes - [Non Drop] - [Indian Likes] - Real HQ","	🆕Instagram Likes - [Non Drop] - [High Speed Likes] - Real HQ","🔥Youtube Subscribers || HQ - 100-150/Day || Non Drop || Stable Server - With Extra Engagement"],
+      4: ["🇮🇳Instagram Indian Likes - [Active Accounts with Story Mix] - [High Quality] Non Drop || 20K/D","🇮🇳Instagram Indian Likes - [Active Accounts with Story Mix] - [Very High Quality] Non Drop || 20K/D💎","❤️Instagram Likes - [🇮🇳Indian Mix🇮🇳] - Real Non Drop - [HQ - MQ mix] - Exclusive Price","Instagram Indian Power Likes [100% Active Indian] [Best Quality] [No Drop] Lifetime Guarantee || 40K/D","❤️Instagram Likes [🇮🇳Indian🇮🇳] - 90% Indian - [Very High Quality] - Exclusive Price","🇮🇳 Instagram Indian Likes - [ Highest Quality ! 100% Indian ] - Real and Active - [ Instant Start || 40k/D ] - Power Likes","🇮🇳Instagram Likes - [ Indian ! 80% Indian ] - Real HQ Accounts - [ 0-1 H start || 10-20K/D]"],
+      5: ["🆕Instagram Followers - [15Days Refill || MIX] - [Instant Start || 100K+/D]♻️","Instagram Followers - [15 D Refill || 40%+ Drop] - [Instant Start || 50K/D]⚡♻️","👉Instagram Followers - Real - [10+ K/D] - [60 Days Refill Button] Instant Start","⚡Instagram Followers || REAL - 30 Days Refill - Low Drop || Super Fast - 5-15K/D Speed - Instant || 💲","🆕Instagram Followers - [ Low Drop || 30D Refill ] - HQ , Instant Start - [ 100-200K/D]⚡♻️","🌜Instagram Followers - [MQ || 20-25% Drop] - [30 Days Refill] - [Instant || 10-20K/D]","⚡Instagram Followers - [30D Refill || ] - [Instant Start || 20K/D]♻️🔥","🔥Instagram Followers - [Real Quality] - [30D Refill Button] - Instant Start - [ 10-20K/D]♻️💎🔥	","Instagram Followers - [30Days Refill - 90% Real Mix] - Instant Start - [30-40K/D]🔥♻️💎","Instagram Followers [Good Quality] [30 Days Refill] [10-100K/D] Quick Start","💎Instagram Followers || ✨HQ Profiles - Multiple Posts || Super Fast 70-100K/D - Instant Start ⚡","🇮🇳 Instagram Followers [⚡SUPERFAST⚡] [70% Indian Active] [30 Days Refill ] [Max 10% Drop] [High Quality] [Fastest Server] [0-5/M]","💎👑Instagram Followers [High Quality] [World Wide] [30 Days Refill] [Instant] -","Instagram Followers - [30D Refill || HQ Accounts] - [Instant Start || 50K/D] Very Less Drop 💎🔥♻️","😍 Instagram Followers | Mix | Good Quality | Very Low Drop| Refill 60Days | 15K | 0-8K Per Day","Instagram Followers [Mix] [High Quality] [60 Days Refill and Cancel Button] [Max 10% Drop] [5-10K/D] [Instant]"],
+      6: ["💎Instagram Followers - [90 Days Refill] - [Instant || 10-20K/D] - [5-15% Drop || Real Mix]","✨Instagram Followers [MQ & HQ Mix] || 90 Days Refill || 10-40K/D Speed || Instant Start - Special Price","99 Days Refill Instagram Followers Good Quality ♻️ [SUGGESTED] --","👑Instagram Followers [ Refill Button: 90 Days ] [ Max - 1M | Speed: 15k+ Per Day ] ♻🔥","🇮🇳 Instagram Followers [Indian Mix] || 100 Days Refill || [Max 10% Drop] [Amazing Quality] [10-20K/D] [Instant]","🌍99 Days Refill -- Instagram Followers - {NON DROP} [ Max: 100K | Speed: 4000/D ] [ Superfast ]"],
+      7: ["🔥Instagram Followers || 1 Year Refill | Very High Quality | Mixed Profiles | Max 300k | Cheapest 1 Year Refill	","🌎Instagram Followers - [365 Days Refill] - [ Stable || 0-3% Drop ] - [ Instant Start || 10-50K/D ]","Instagram Followers- [Real Indian Mix] - [20-30K/D || Instant Start] - 120Days Refill🆕🔥♻️","🌜Instagram Followers - [1 Year Refill || Mix Acc] - [10-20% Drop] - [Instant ||] 10-30K/D]","💎Instagram Followers - 1 year Refill [ HQ ] - Exclusive Price - Non Drop || Real || 10-30K/D - Instant","💎Instagram Followers (Super Stable) - 🔥1 Year Refill🔥 | 20-40k Per Day Speed | Instant Start - Indian Mix","🇮🇳 Instagram Followers [Indian Mix] || 1 Year Refill || [Max 10% Drop] [Recommended] [10-20K/D] [Instant]💎","⚡Instagram Followers [365 Days Reflll] -- 30-50k Per Day -- Limited Time Offer","🌍1 Year Refill Instagram Followers [Good Quality] CHEAPER THAN CHEAP [𝓡𝓔𝓐𝓛] - Stable after refill","⚡Instagram Followers [365 Days Reflll] -- 30-50k Per Day -- Limited Time Offer","🌍2 Year Refill Instagram Followers [Good Quality] CHEAPER THAN CHEAP [𝓡𝓔𝓐𝓛] - Stable after refill","💎Instagram Real Followers | Non Drop | INSTANT | ⚡Speed: 1-5K Per Day | 🔥Lifetime Guarantee🔥","⭐Instagram Followers - 1 year REFILL [ HQ ] [ STABLE ] NON DROP","🇮🇳💎LIFE TIME || Instagram Followers || Super Stable [Suggested] | Never dropping after refill || 0-2hr Start",],
+      8: [""]
+    };
+    const optionValues2 = {
+      1: ["2191","2192"]
+    }
+    
+    // Function to update the options of the second select element
+    function updateOptions(selectedValue) {
+      // Remove existing options
+      secondSelect.innerHTML = "";
+      
+      // Add new options based on the selected value
+      optionValues[selectedValue].forEach((optionValue) => {
+        const option = document.createElement("option");
+        option.value = optionValue;
+        option.text = optionValue;
+        secondSelect.appendChild(option);
+      });
+    }
+    
+    // Event listener for the first select element
+    firstSelect.addEventListener("change", () => {
+      const selectedValue = firstSelect.value;
+      
+      // Update the options of the second select element
+      updateOptions(selectedValue);
+    });
+</script>
+<script>
+    function openNav(){
+        document.getElementById("sidenave").style.display = "flex";
+        // document.getElementById("sidenave").style.display = none;
+    }
+    
+    function closeNav(){
+        document.getElementById("sidenave").style.display = "none";
+    }
+</script>
+</html>
+ 
+    

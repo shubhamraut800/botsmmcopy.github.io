@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, user-scalable=no">
+    <link rel="stylesheet" href="{{ url_for('static',filename='style4.css')}}">
+    <!-- <link rel="stylesheet" href="{{ url_for('static',filename='style5.css')}}"> -->
+    <!-- <link rel="stylesheet" href="{{ url_for('static',filename='style6.css')}}">     -->
+    <title>BOTSMM</title>
+</head>
+<body>
+    <nav>
+        <h1 onclick="openNav()"><big>&#9776;</big></h1>
+        <h1 id="h1nav">BOTSMM</h1>
+    </nav>
+    <main>
+        
+        {% block body %}{% endblock %}
+    </main>
+    <div id="whatdiv">
+       <a href="https://wa.me/message/AFZ3X4ZB5NSKN1"><img src="{{ url_for('static',filename='images/whatappimg.png')}}" alt=""></a>
+
+    </div>
+    <div id="sidenave">
+        <h1><a href="javascript:void(0)" id="cut" onclick="closeNav()">&times</a></h1>
+        <button class="snavb">{{ username }}</button>
+        <form action="/orderhis" method="post">
+            <select name="orderhisn" id="default">
+                <option value={{ username }}></option>
+            </select>
+            <button class="snavb" id="orderhisb">orderhis</button>
+        </form>
+        <form action="/index" method="post">
+            <select name="Home" id="default">
+                <option value={{ username }}></option>
+            </select>
+            <button class="snavb" id="Home">Home</button>
+        </form>
+        <form action="/logout" method="post">
+            <select name="username" id="default">
+                <option value={{ username }}></option>
+            </select>
+            <button class="snavb" id="logout" class="logout">logout</button>
+        </form>
+        <!-- <a class="snavb" href="/orderhis"><button class="snavb">orders</button></a> -->
+        <!-- <button class="snavb"><a href="/logout">logout</a></button> -->
+    </div>
+</body>
+<script>
+    function openNav(){
+        document.getElementById("sidenave").style.display = "flex";
+        // document.getElementById("sidenave").style.display = none;
+    }
+    
+    function closeNav(){
+        document.getElementById("sidenave").style.display = "none";
+    }
+</script>
+</html>

@@ -1,0 +1,56 @@
+nav{
+    display: flex;
+    background-color: rgb(201, 218, 245);
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    height: 60px;
+    gap: 35px;
+    width: 100%;
+}
+html, body {
+    max-width: 100%;
+    overflow-x: hidden;
+  }
+img{
+    mix-blend-mode: multiply;
+}
+body{
+    margin: 0;
+}
+img{
+    height: 40px;
+    width: 40px;
+
+}
+#home{
+    margin-left: 8px;
+}
+#form{
+    height: 300px;
+    width: 350px;
+    margin-top: 15%;
+    margin-left: 1.5%;
+    background-color: aliceblue;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+form{
+    margin-left: 15%;
+    padding-top: 15%;
+
+}
+#lebel2{
+    margin-right: 13.7%;
+    padding-bottom: 2%;
+}
+#lebel1{
+    margin-right: 14%;
+    padding-bottom: 2%;
+}
+#lebel3{
+    margin-right: 5.4%;
+}
+.navi{
+    margin-top: 6px;
+}
+.input{
+    margin-bottom: 5%
+}

@@ -1,0 +1,128 @@
+nav{
+    background-color: rgb(91, 91, 229);
+    /* height: 30%; */
+    width: 100%;
+    position: fixed;
+    display: flex;
+    overflow: hidden;
+    top: 0;
+    gap: 20%;
+}
+nav #h1nav{
+    top: 5px;
+    position: relative;
+    color: white;
+
+}
+body{
+    margin: 0;
+    /* background-image: linear-gradient(rgb(221, 221, 232), blue); */
+    background-color: rgb(118, 118, 197);
+}
+h1{
+    margin: 0px;
+    padding: 7px;
+
+}
+main{
+    position: relative;
+    margin-top: 100px;
+}
+form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 50px;
+
+}
+select, input{
+    width: 70%;
+    height: 40px;
+    border: 1px solid black;
+    font-size: larger;
+    text-align: center;
+}
+#submitbttn{
+    height: 25px;
+    width: 90px;
+    border-radius: 50px;
+    background-color: black;
+    color: white;
+
+}
+#qrcodee{
+    background-color: white;
+    border: 2px solid black;
+    width: 80%;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+
+}
+#thank{
+    color: red;
+}
+
+/* #sidenave{
+    display: flex;
+    flex-direction: column;
+    background-color: blue;
+    align-items: center;
+    gap: 20px;
+    padding: 20px;
+    padding-top: 0;
+    /* padding-top: 50px; 
+    width: 50%;
+    position: fixed;
+    top: 0;
+
+    
+} */
+.snavb{
+    width: 80%;
+    height: 30px;
+
+}
+#cut{
+    margin: 0;
+    padding: 0;
+    float: right;
+    position: relative;
+    left: 80px;
+    color: black;
+}
+#sidenave{
+    display: none;
+    flex-direction: column;
+    background-color: rgb(93, 93, 226);
+    align-items: center;
+    gap: 20px;
+    padding: 20px;
+    padding-top: 0;
+    /* padding-top: 50px; */
+    width: 50%;
+   position: fixed;
+    top: 0;
+}
+#whatdiv img{
+    border-radius: 100px;
+    border: 2px solid black;
+}
+#default{
+    display: none;
+}
+#qrcode{
+    background-color: white;
+    height: 200px;
+    width: 200px;
+    border: 2px solid black;
+    background-image: url("images/IMG_20230217_170037.jpg");
+    background-size: cover;
+}
+#whatdiv{
+    position: fixed;
+    right: 7px;
+    bottom: 100px;
+}

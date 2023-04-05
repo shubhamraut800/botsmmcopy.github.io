@@ -1,0 +1,18 @@
+{% extends "layout.html" %}
+{% block body %}
+      <table class="table">
+        <tr class="table__header">
+            {% for heading in headings %}
+            <th class="table__cell">{{ heading }}</th>
+            {% endfor %}
+        </tr>
+        {% for row in data %}
+        <tr class="table__row">
+            <td class="table__cell">{{ row["service"] }}</td>
+            <td class="table__cell">{{ row["quantity"] }}</td>
+            <td class="table__cell">{{ row["amount"] }}</td>
+            <td class="table__cell">{{ row["status"] }}</td>
+        </tr>
+        {% endfor %}
+      </table>
+      {% endblock %} 

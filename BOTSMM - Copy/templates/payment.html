@@ -1,0 +1,36 @@
+{% extends "layout.html" %}
+{% block body %}
+        <form action="/order2" method="post">
+                <select name="selectm" id="">
+                    <option value="">select method</option>
+                    <option value="Paytm">Paytm</option>
+                    <option value="Phonepay">Phonepay</option>
+                    <option value="Googlepay">Googlepay</option>
+                    <option value="Bhimupi">Bhimupi</option>
+                </select>
+                <select name="default" id="default">
+                    <option value={{ username }} ></option>
+                </select>
+                <select name="a2" id="default">
+                    <option value={{ a }} ></option>
+                </select>
+                <select name="b2" id="default">
+                    <option value={{ b }} ></option>
+                </select>
+                <select name="c2" id="default">
+                    <option value={{ c }} ></option>
+                </select>
+                <select name="d2" id="default">
+                    <option value={{ d }} ></option>
+                </select>
+                <div id="qrcode">
+                    <!-- <img src="whatappimg.png" alt=""> -->
+                </div>
+                <input type="text" name="amount" placeholder="enter amount">
+                <input type="text" name="orderid" placeholder="enter order id">
+                <button id="submitbttn">submit</button>
+            <div>
+                
+            </div>
+        </form>
+        {% endblock %}

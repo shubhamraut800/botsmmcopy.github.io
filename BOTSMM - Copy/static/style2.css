@@ -1,0 +1,75 @@
+/* #singup_main_div{
+    height: 664px;
+    width: 360px;
+    display: flex;
+    filter: brightness(50%);
+    justify-content: center;
+    /* background-image: url("images/singup_background.jpg");
+    background-color: black;
+    background-size: cover; */
+    
+
+
+    #singup{
+        background-color:white;
+        position: relative;
+        bottom: 300px;
+        top: 151px;
+        left: 101px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        filter: brightness(100%);
+        width: 80%;
+        height: 50%;
+    }
+    body{
+        /* background-color: rgb(68, 74, 79); */
+        background-image: linear-gradient(to bottom, rgb(178, 192, 231), rgb(47, 91, 194));
+        background-size: cover;
+        height: 700px;
+        display: flex;
+        justify-content: center;
+    }
+    #logoimg{
+        height: 74px;
+        width: 212px;
+        position: relative;
+        top: 38px;
+        right: 141px;
+        mix-blend-mode: multiply;
+    }
+    pre{
+        color: red;
+    }
+    form{
+        margin: 50px;
+    }
+    #submit{
+        background-color: blue;
+        color: white;
+        border-radius: 20px;
+        position: relative;
+        /* top: 10px; */
+        height: 35px;
+        width: 90px;
+        left: 40px;
+    }
+    input{
+        margin-top: 10px;
+        margin-bottom: 10px;
+        border: 1px solid black;
+    }
+    #labelid{
+        color: blue;
+        position: relative;
+        font-size: xx-large;
+        left: 40px;
+        bottom: 20px;
+    }
+    a{
+        position: relative;
+        top: 73%;
+        right: 22%;
+        color: blue;
+    }

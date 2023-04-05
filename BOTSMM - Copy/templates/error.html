@@ -1,0 +1,19 @@
+{% extends "layout22.html" %}
+{% block body %}
+        <div id="div2">
+            <form action="/inde" method="post">
+                <div id="divlogin">
+                    <h1>Login</h1>
+                <p>incorect {{signal}}, try again</p>
+                </div>
+                <div id="div3">
+
+                    <input type="text" placeholder="name" name="name">
+                    <!-- <input type="text" placeholder="email" name="email"> -->
+                    <input type="text" placeholder="password" name="password">
+                </div>
+                <button>submit</button>
+                <p>Don't have account?<a href="/">singup</a></p>
+            </form>
+        </div>
+        {% endblock %}  
